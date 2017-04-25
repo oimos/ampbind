@@ -313,6 +313,27 @@ limitations under the License.
     </amp-carousel>
 
 
+    <p>Selected Slide: <span [text]="+selectedSlide + 1">1</span>/3</p>
+	<amp-carousel controls
+	type="slides"
+	width="400"
+	height="300"
+	[slide]="selectedSlide"
+	on="slideChange:AMP.setState({
+	selectedSlide: event.index
+	})"
+	>
+		<amp-img src="https://unsplash.it/60/40?image=11"
+	      width="400"
+	      height="300"></amp-img>
+	    <amp-img src="https://unsplash.it/60/40?image=12"
+	      width="400"
+	      height="300"></amp-img>
+	    <amp-img src="https://unsplash.it/60/40?image=13"
+	      width="400"
+	      height="300"></amp-img>
+	</amp-carousel>
+
 
 
   	<!-- <div [class]="menu[menuClass]" class="hide">HEY</div>
